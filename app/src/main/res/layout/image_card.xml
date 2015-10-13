@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:card_view="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="4dp">
+
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <ImageView android:layout_width="match_parent"
+                       android:layout_height="250dp"
+                       android:id="@+id/image"
+                       android:scaleType="centerCrop"/>
+
+            <FrameLayout android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_alignBottom="@+id/image">
+                <View android:layout_width="match_parent"
+                      android:layout_height="64dp"
+                      android:background="@drawable/bottom_gradient"/>
+                <TextView
+                        android:id="@+id/title"
+                        android:text="Toller Kastanienbaum"
+                        android:layout_gravity="bottom"
+                        android:layout_margin="8dp"
+                        style="@style/Base.TextAppearance.AppCompat.Large.Inverse"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+            </FrameLayout>
+            <TextView
+                    android:id="@+id/description"
+                    android:layout_below="@+id/image"
+                    android:layout_margin="8dp"
+                    style="@style/Base.TextAppearance.AppCompat.Subhead"
+                    android:text="Sehr lange Beschreibung zum Kastanienbaum, auch umbrechen müsste, sonst wäre sie auch nicht lang."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/annotation"
+                      android:layout_below="@+id/description"
+                      android:layout_marginLeft="8dp"
+                      android:layout_marginRight="8dp"
+                      android:layout_marginBottom="8dp"
+                      android:text="Erstellt am 31.12.2015 von Adrian Stabiszewski aus Untergruppenbach"
+                      style="@style/Base.TextAppearance.AppCompat.Small"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
